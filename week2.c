@@ -3,17 +3,12 @@
 
 int main(int argc, char *argv[])
 {
-    if(argc < 2) {
-        printf("Usage: %s <filename>\n", argv[0]);
-        return 1;
-    }
 
     char* filename = argv[1];
     FILE* file;
     char search[100], line[50];
     printf("Enter the word to be searched: ");
     scanf("%s", search);
-    // Clearing the input buffer
     while(getchar() != '\n');
 
     file = fopen(filename, "r");
